@@ -1,6 +1,10 @@
 body {
     padding: 40px;
 }
+.head{
+    color: blue;
+    display: flex;
+}
 table {
     width: 100%;
     border-collapse: collapse;
@@ -8,16 +12,14 @@ table {
 h2 {
     width: 100%;
     text-align: center;
-
+    color: #4c78ce;
 }
 .div1 {
     width: 50%;
-    float: left;
     text-align: left ;
 }
 .div2 {
     width: 50%;
-    float: right;
     text-align: right;
 }
 td, th {
