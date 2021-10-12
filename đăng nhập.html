@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+</head>
+<body>
+<script>
+    let username = prompt("who's there?", '');
+    if (username == 'Admin') {
+        alert('welcome');
+    } else if (username == null) {
+        alert('canceled');
+    } else {
+        alert("I don't know you");
+    }
+    let pass = prompt('password', '');
+    if (pass == 'TheMaster') {
+        alert('welcome!');
+    }  else if ( pass == null) {
+        alert('canceled.');
+    } else {
+            alert('wrong password');
+    }
+
+</script>
+</body>
+</html>
