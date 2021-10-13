@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SK bàn phím</title>
+</head>
+<body onload="docReady()">
+<form>
+    <img id="hello" src="maquylagi.jpg" style="position:absolute;left:0; top:0;" height="200" width="180"/>
+</form>
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById('hello');
+        element.style.top = parseInt(element.style.top) -10 + 'px';
+    }
+    function dowArrowPressed() {
+        let element = document.getElementById('hello');
+        element.style.top = parseInt(element.style.top) +10 + 'px';
+    }
+    function leftArrowPressed() {
+        let element = document.getElementById('hello');
+        element.style.left = parseInt(element.style.left) -10 + 'px';
+    }
+    function rightArrowPressed() {
+        let element = document.getElementById('hello');
+        element.style.left = parseInt(element.style.left) +10 + 'px';
+    }
+    function moveselection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+            upArrowPressed();
+            break;
+            case 40:
+                dowArrowPressed();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveselection);
+    }
+</script>
+</body>
+</html>
