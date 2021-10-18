@@ -5,6 +5,33 @@
     <title>Chuyển đổi</title>
 </head>
 <body>
+<table style="text-align: center">
+    <h2>Hãy nhập số liệu để quy đổi:</h2>
+    <tr>
+        <td><label for="input"><input type="text" id="input"></label></td>
+        <td>
+                <select id="ND1">
+                    <option value="Độ c">Độ c</option>
+                    <option value="Độ F"> Độ F</option>
+                </select>
+        </td>
+        <td>
+                <select id="ND2">
+                    <option value="Độ F">Độ F</option>
+                    <option value="Độ c">Độ c</option>
+                </select>
+        </td>
+        <td><button onclick="change()">Quy đổi</button></td>
+    </tr>
+</table>
+<h1 id="result"></h1>
+<script>
+    function change() {
+        let input = parseInt(document.getElementById("input").value)
+        let ND1 =document.getElementById("ND1").value
+        let ND2 = document.getElementById("ND2").value
 
+
+</script>
 </body>
 </html>
