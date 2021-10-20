@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 7</title>
+</head>
+<body>
+<script>
+    let arr = new Array (3);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt('Nhập phần tử mảng: ');
+    }
+    document.write('mảng khởi tạo' +arr +'<br>')
+
+    let number = prompt(' Nhập phần tử muốn xóa: ');
+    document.write('Giá trị muốn xóa:' +number + '<br>')
+    let check = 0;
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (number === arr[i]) {
+            check++;
+            index = i;
+            break;
+        }
+    } if (check > 0) {
+            arr.splice(index, 1);
+        document.write('Mảng Sau Khi Xóa: ' + arr);
+    }else {
+            document.write('Phần Tử ' + number + ' Bạn Muốn Xóa Không Có Trong Mảng');
+    }
+</script>
+</body>
+</html>

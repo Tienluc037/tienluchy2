@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 8</title>
+</head>
+<body>
+<script>
+    let arr = new Array (3);
+    for ( let i = 0; i < arr.length; i++) {
+        arr[i] = prompt('Nhập số phần tử: ' )
+    } document.write('phần tử của mảng: '+arr + '<br>')
+
+    for ( let i = 0; i < arr.length; i++) {
+        arr.sort(function (a,b) {return b - a});
+    }
+    document.write('Mảng sau khi sắp xếp:' + arr)
+</script>
+</body>
+</html>

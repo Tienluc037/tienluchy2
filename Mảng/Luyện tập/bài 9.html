@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9</title>
+</head>
+<body>
+<script>
+  let a = new Array (3);
+  for (let i = 0; i < a.length; i++) {
+      a[i] = prompt(' nhập phần tử mảng a:' )
+  } document.write('mảng a: ' + a +'<br>')
+
+  let b = new Array (3);
+  for (let i = 0; i < a.length; i++) {
+      b[i] = prompt(' nhập phần tử mảng b:')
+  } document.write('mảng b: ' + b + '<br>')
+
+  let c = ([a]+[b]);
+  c = a.concat(b)
+  document.write('mảng c sau khi nối: ' + c)
+</script>
+</body>
+</html>
