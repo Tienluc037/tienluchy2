@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập Bán Kính: <input type="text" id="txtBanKinh">
+<button type="button" onclick="chuVi()">Tính Chu Vi</button>
+<button type="button" onclick="dienTich()">Tính Diện Tích</button>
+<script>
+
+    var pi=3.14;
+    function chuVi(){
+        let r=parseInt(document.getElementById('txtBanKinh').value)
+        alert('Chu Vi Hình Trò Có Bán Kính '+r+' là:'+(r*2*pi))
+    }
+    function dienTich(){
+        let r=parseInt(document.getElementById('txtBanKinh').value)
+        alert('Diện Tích Hình Tròn Có Bán Kính '+r+' Là: '+((r*r)*pi))
+    }
+</script>
+</body>
+</html>

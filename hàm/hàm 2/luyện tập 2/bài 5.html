@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1=parseInt(prompt('Nhập Số Thứ 1'))
+    let number2=parseInt(prompt('Nhập Số Thứ 2'))
+    let number3=parseInt(prompt('Nhập Số Thứ 3'))
+
+    function findMin(){
+        let min= number1>number2?number2>number3?number3:number2:number1>number3?number3:number1;
+        console.log(min)
+        alert('Giá Trị Nhỏ Nhất là: '+min)
+    }
+    findMin();
+</script>
+</body>
+</html>

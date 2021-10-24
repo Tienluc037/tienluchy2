@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="FindStar()">Click Me</button>
+<script>
+    let arr1=["Polaris","Aldebaran","Dened","Vega","Altair","Dubhe","Regulus"];
+    let arr2=["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+
+    //function FindStar(){
+    let strings =prompt('Nhập Chuỗi Muốn Tìm')
+    let array=strings;
+    for (let i=0;i<=arr1.length;i++) {
+        if (arr1[i] === array) {
+            alert(arr2[i]);
+        }
+    }
+</script>
+</body>
+</html>
