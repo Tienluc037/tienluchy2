@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>bài 5</title>
 </head>
 <body>
 <script>
-    let a = prompt('Nhập chuỗi: ');
-    document.write('chuỗi1: ' +a +'<br>')
-    let a2 = prompt('nhập chuỗi2: ' );
-    document.write('chuỗi 2:' +a2)
-
+    let count = 0;
+    let stringA = prompt('Nhập chuỗi 1:');
+    let stringB = prompt('Nhập chuỗi 2:');
+    if (stringA.length === stringB.length) {
+        for (let i = 0; i < stringB.length; i++) {
+            if (stringA[i] !== stringB[i]) {
+                alert('2 chuỗi không bằng nhau');
+                break;
+            } else {
+                count++;
+            }
+        }
+    } else {
+        alert('2 chuỗi không bằng nhau');
+    }
+    if (count === stringA.length) {
+        alert('2 chuỗi bằng nhau');
+    } else {
+        alert('2 chuỗi không bằng nhau');
+    }
 </script>
 </body>
 </html>
