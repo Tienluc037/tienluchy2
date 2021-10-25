@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinh() {
+        let namSinh = +prompt('Nhập năm sinh:');
+        let nam = 2021;
+        while (namSinh > nam) {
+            alert(" không hợp lệ.")
+            namSinh = +prompt('Nhập năm sinh:');
+        }
+        let tuoi = nam - namSinh;
+
+        alert('Tuổi của bạn:' + (tuoi))
+    }
+
+    tinh()
+</script>
+</body>
+</html>

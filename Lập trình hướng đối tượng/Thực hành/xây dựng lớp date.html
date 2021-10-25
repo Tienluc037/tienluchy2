@@ -6,34 +6,39 @@
 </head>
 <body>
 <script>
-    let MyDate = function (day, month, year) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
-    };
-    this.getDay = function() {
-        return this.day;
+    class MyDate {
+        day;
+        month;
+        year;
+
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+    getDay() {
+            return this.day
     }
-    this.getMonth = function() {
-        return this.month;
+    setDay(day) {
+            this.day = day
     }
-    this.getYear = function() {
-        return this.year;
+    getMonth() {
+            return this.month
     }
-    this.setDay = function() {
-        this.day = day;
+    setMonth(month) {
+            this.month = month
     }
-    this.setMonth = function() {
-       this.month = month;
+    getYear() {
+            return this.year
     }
-    this.setYear = function() {
-        this.year = year;
+    setYear(year){
+            this.year = year
     }
-    let date = new MyDate(2, 2, 2007);
-    let day = date.getDay();
-    let month = date.getMonth();
-    let year = date.getYear();
-   console.log(day + "/" + month + "/" + year);
+    }
+        let date = new MyDate(2, 2, 2007);
+    date.setDay(3)
+
+
 </script>
 </body>
 </html>
