@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>đếm số 1-100</title>
+    <title>hiển thị các số nguyên tố đầu tiên</title>
 </head>
 <body>
-
+<script>
+    let number = parseInt(prompt('Nhập số lượng số nguyên tố:'));
+    let count = 0;
+    let N=2;
+    for (count=0; count < number; ){
+        let check = true;
+        for (let i=2;i < N; i++){
+            if (N % i === 0){
+                check = false
+                break;
+            }
+        }
+        if (check === true) {
+            document.write(N + "; ")
+            count++
+        }
+        N++
+    }
+</script>
 </body>
 </html>
