@@ -5,56 +5,49 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="HCN" width="1000" height="800" style="background-color: antiquewhite"></canvas>
 <script>
-    class HinhChuNhat {
-        ChieuDai;
-        ChieuRong;
-        ChuVi;
-        DienTich
-
-
-        constructor(chieudai, chieurong) {
-            this.ChieuDai = chieudai;
-            this.ChieuRong = chieurong;
-
+    class Rectangle {
+        width;
+        height;
+        perimeter;
+        area;
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getCdai() {
+            return this.width;
+        }
+        setCdai(cdai) {
+            this.width = cdai;
+        }
+        getCrong() {
+            return this.height;
         }
 
-        getChieuDai() {
-            return this.ChieuDai;
+        getPerimeter() {
+            return (this.width + this.height) * 2
         }
-
-        setChieuDai(value) {
-            this.ChieuDai = value;
+        setPerimeter(perimeter) {
+            return this.perimeter = perimeter;
         }
-
-        getChieuRong() {
-            return this.ChieuRong;
+        getArea() {
+            return (this.width * this.height);
         }
-
-        setChieuRong(value) {
-            this.ChieuRong = value;
-        }
-        getChuVi() {
-            return (this.ChieuDai + this.ChieuRong)*2
-        }
-        setChuVi(chuvi) {
-            return this.ChuVi = chuvi;
-        }
-
-        getDienTich() {
-            return (this.ChieuDai * this.ChieuRong);
-        }
-        setDienTich(dientich) {
-            this.DienTich = dientich;
+        setArea(area) {
+            this.area = area;
         }
     }
-
-    let chuvi = new HinhChuNhat(3,5);
-    let dientich = new HinhChuNhat(7,5);
-    document.write(chuvi.getChuVi());
-    document.write(dientich.getDienTich());
-    console.log(chuvi.setChuVi(50)) ;
-
+    let perimeter1 = new Rectangle(100, 80);
+    let area = new Rectangle(4,5 );
+    document.write("Chu vi:" + perimeter1.getPerimeter() + "," + "Diện tích:" + area.getArea());
+    let canvas = document.getElementById("HCN");
+    let pen = canvas.getContext("2d");
+    pen.beginPath();
+    pen.rect(100,200,perimeter1.getCdai(),perimeter1.getCrong());
+    pen.stroke();
+    pen.closePath();
 </script>
 </body>
 </html>
