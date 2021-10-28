@@ -6,10 +6,55 @@
 </head>
 <body>
 <script>
-    class Rectangle {
-        int;
+    class HinhChuNhat {
+        ChieuDai;
+        ChieuRong;
+        ChuVi;
+        DienTich
 
+
+        constructor(chieudai, chieurong) {
+            this.ChieuDai = chieudai;
+            this.ChieuRong = chieurong;
+
+        }
+
+        getChieuDai() {
+            return this.ChieuDai;
+        }
+
+        setChieuDai(value) {
+            this.ChieuDai = value;
+        }
+
+        getChieuRong() {
+            return this.ChieuRong;
+        }
+
+        setChieuRong(value) {
+            this.ChieuRong = value;
+        }
+        getChuVi() {
+            return (this.ChieuDai + this.ChieuRong)*2
+        }
+        setChuVi(chuvi) {
+            return this.ChuVi = chuvi;
+        }
+
+        getDienTich() {
+            return (this.ChieuDai * this.ChieuRong);
+        }
+        setDienTich(dientich) {
+            this.DienTich = dientich;
+        }
     }
+
+    let chuvi = new HinhChuNhat(3,5);
+    let dientich = new HinhChuNhat(7,5);
+    document.write(chuvi.getChuVi());
+    document.write(dientich.getDienTich());
+    console.log(chuvi.setChuVi(50)) ;
+
 </script>
 </body>
 </html>

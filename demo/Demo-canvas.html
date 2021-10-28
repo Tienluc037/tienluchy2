@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</script>
+<canvas width="600" height="800" id="test" style="background-color: beige"></canvas>
+// tạo trang giấy
+<script>
+    let canvas = document.getElementById("test"); // khởi tạo biến canvas chỉ tới giá trị có id 'test'
+    let pen = canvas.getContext("2d"); // khai báo bút vẽ trên canvas nền 2d
+
+    function drawRect(x, y) {
+        pen.beginPath(); // lệnh bắt đầu vẽ
+        pen.rect(x, y, 100, 80);
+        pen.strokeStyle = "blue"; // màu đường vẽ
+        pen.fillStyle = "red"; // màu bên trong hCN
+        pen.stroke();
+        pen.fill();
+        pen.closePath(); // dừng
+    }
+
+   let x = 100;
+   // let y = 200;
+    setInterval(function () { //sau '500' chạy lại hàm function
+        pen.clearRect(0, 0, canvas.width, canvas.height);
+        drawRect(x, 200); //thay đổi vị trí drawrect
+         x += 5; // sau mỗi lần lặp += 5
+       //  y += 5;
+        x = Math.floor(Math.random() * canvas.width); // random tọa độ (x)
+    }, 500);
+</script>
+</body>
+</html>
