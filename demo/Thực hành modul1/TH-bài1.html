@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//Câu 1
+Cho danh sách các điểm thi ở trong một mảng
+Hãy viết hàm tìm được điểm thi cao thứ 3 với đầu vào là một mảng điểm.(không dùng hàm có sẵn để sắp xếp). <br>
+<script>
+
+    let arr = [1,5,10,9,6,3,8];
+    let check;
+    function checkTop3() {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    check = arr[i];
+                    arr[i] = arr[j];
+                    check  = arr[j]
+                }
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            document.write(arr[i]  + "<br>")
+        }
+    }
+    checkTop3()
+    document.write( "Điểm cao thứ 3 là:" +arr[2]);
+
+</script>
+</body>
+</html>

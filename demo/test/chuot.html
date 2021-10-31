@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--    <style type="text/css">-->
+<!--        body,html-->
+<!--        {-->
+<!--            width: 100%;-->
+<!--            height: 100%;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<!--<div>-->
+<!--    <div class="text-center">-->
+        <canvas id="animation" width="900" height="600" style="border: 2px solid #2d0057;"></canvas>
+<!--    </div>-->
+<!--</div>-->
+<script >//type="text/javascript"
+    let canvas=document.getElementById('animation');
+    let ctx=canvas.getContext('2d');
+    let x=100;
+    let y=100;
+    let r=20;
+
+    function createCircle()
+    {
+      //  clear();
+        ctx.beginPath();
+        ctx.arc(x,y,r,0,2*Math.PI);
+        ctx.fillStyle="orange";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+    }
+
+     function clear()
+     {
+       ctx.fillStyle="rgba(255,255,255,0.3)";
+         ctx.fillRect(0,0,canvas.width,canvas.height);
+
+     }
+
+    canvas.addEventListener('mousemove',function(e){
+        clear();
+        x=e.clientX;
+        y=e.clientY;
+
+        x-=canvas.offsetLeft;
+        y-=canvas.offsetTop;
+        createCircle();
+    });
+    createCircle();
+//let canvas = document.getElementById("myCanvas");
+let pen = canvas.getContext("2d");
+//let rect = new Rect(500, 400, "red",100,50);
+
+function drawCircle() {
+    let radius = Math.floor(Math.random() * 10);
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height;
+
+    pen.beginPath();
+    pen.arc(x, y, radius, 0, 2 * Math.PI);
+    pen.stroke();
+    pen.fillStyle = getRandomColor();
+    pen.fill();
+    pen.closePath();
+}
+
+function getRandom() { //1 khởi tạo 2 hàm để random màu
+    return Math.floor(Math.random() * 255);
+}
+
+function getRandomColor() { //2
+    let r = getRandom();
+    let g = getRandom();
+    let b = getRandom();
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
+
+function drawCirclePlus() {
+    for (let i = 0; i < 10; i++) {
+        drawCircle();
+    }
+}
+
+function main() {
+    pen.clearRect(0, 0, canvas.width, canvas.height);
+    drawCirclePlus();
+    // rect.move();
+   // rect.render(canvas);
+
+}
+
+
+
+
+// setInterval(main, 3000);
+drawCirclePlus();
+</script>
+</body>
+</html>

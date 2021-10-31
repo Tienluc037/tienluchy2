@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="test2.js"></script>
+</head>
+<body>
+<canvas width="1000" height="800" style="border: 1px solid #d3d3d3" id="myCanvas"></canvas>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let pen = canvas.getContext("2d");
+    let rect = new Rect(500, 400, "red",100,50);
+
+    function drawCircle() {
+        let radius = Math.floor(Math.random() * 10);
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+
+        pen.beginPath();
+        pen.arc(x, y, radius, 0, 2 * Math.PI);
+        pen.stroke();
+        pen.fillStyle = getRandomColor();
+        pen.fill();
+        pen.closePath();
+    }
+
+    function getRandom() { //1 khởi tạo 2 hàm để random màu
+        return Math.floor(Math.random() * 255);
+    }
+
+    function getRandomColor() { //2
+        let r = getRandom();
+        let g = getRandom();
+        let b = getRandom();
+        return "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+    function drawCirclePlus() {
+        for (let i = 0; i < 10; i++) {
+            drawCircle();
+        }
+    }
+
+    function main() {
+        pen.clearRect(0, 0, canvas.width, canvas.height);
+        drawCirclePlus();
+       // rect.move();
+        rect.render(canvas);
+
+    }
+
+
+
+
+    // setInterval(main, 3000);
+    drawCirclePlus();
+
+    function clear()
+    {
+        pen.fillStyle="rgba(255,255,255,0.3)";
+        pen.fillRect(0,0,canvas.width,canvas.height);
+
+    }
+
+    canvas.addEventListener('mousemove',function(e){
+        clear();
+        rect.x=e.clientX;
+        rect.y=e.clientY;
+
+        x-=canvas.offsetLeft;
+        y-=canvas.offsetTop;
+        rect.render(canvas);
+    });
+    rect.render(canvas);
+    main();
+    // requestAnimationFrame(main)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // requestAnimationFrame(test)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // canvas.addEventListener('mousemove',function (e){
+    //     clear();
+    //
+    //     render();
+    // });
+    // render();
+    // function controlRect(event) {
+    //     switch (event.key) { //check, nếu case a thì rect.direction sang trái
+    //         case "a":
+    //             rect.direction = "left";
+    //             rect.move();
+    //             pen.clearRect(0, 0, canvas.width, canvas.height);
+    //             break;
+    //         case "d":
+    //             rect.direction = "right";
+    //             rect.move();
+    //             pen.clearRect(0, 0, canvas.width, canvas.height);
+    //             break;
+    //     }
+    // }
+    //
+    // window.addEventListener("keydown", controlRect); // lắng nghe sk gọi đến controlRect
+
+</script>
+</body>
+</html>

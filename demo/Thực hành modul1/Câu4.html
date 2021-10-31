@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô tả của lớp hình chữ nhật như sau:
+<canvas id="HCN" width="1000" height="800" style="background-color: antiquewhite"></canvas>
+<script>
+    class Rectangle {
+        x;
+        y;
+        width;
+        height;
+        color;
+
+        constructor(width, height, color,x,y) {
+            this.width = width;
+            this.height = height;
+            this.color = color;
+            this.x = 10;
+            this.y = 10;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        setHeight() {
+            return this.height;
+        }
+
+        render() {
+            let HCN = document.getElementById("HCN");
+            let pen = HCN.getContext("2d");
+             // pen.beginPath();
+             pen.fillRect(this.x,this.y, this.width, this.height);
+            // pen.stroke();
+            // pen.fill();
+            // pen.closePath();
+        }
+    }
+    let HCN = new Rectangle(200,100,10,10);
+    HCN.render();
+</script>
+</body>
+</html>
