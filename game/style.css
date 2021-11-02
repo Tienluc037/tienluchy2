@@ -34,7 +34,7 @@
     position: relative;
     left: 400px;
     top: -500px;
-    animation: block 2s infinite linear; /* tạo ra chuyển động mà k cần js khoangt tg thực thi 2s */
+    animation: block 2s infinite linear; /* tạo ra chuyển động mà k cần js khg tg thực thi 2s */
 }
 
 #ball {
